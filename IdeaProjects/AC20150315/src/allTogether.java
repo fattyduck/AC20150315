@@ -68,15 +68,28 @@ public class allTogether {
 
         return box ;
     }
-    public static String printTriangle(String word){
-        String pTriangle="";
-        for (int i=1;i<=word.length();i++){
-            
+
+    public static String substring(String word, int start, int end){
+        String result="";
+        for (int i=start; i<end; i++){
+            result+=word.charAt(i);
         }
-        return pTriangle;
+        return result;
     }
 
+    public static void printTriangle(String word){
+
+        for (int i=1;i>word.length();i++){
+            System.out.println(substring(word, 0,i));
+        }
+
+    }
+
+
+
     public static void main(String[] args){
-        System.out.println(box("I am very handsome"));
+        //ystem.out.println(printTriangle("I am very handsome"));
+        String word= "I am very handsome";
+        printTriangle(word);
     }
 }
